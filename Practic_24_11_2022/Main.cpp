@@ -4,6 +4,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <fstream>
+#include <cstdlib>
 using namespace std;
 
 
@@ -12,7 +13,7 @@ int main() {
 	int n = 3;
 	book* mass = new book[n];
 	string path = "file.txt";
-	book a = { "dog","Tor","Artimov", 1980, 350, 35 };
+	book a = { "dog","Tor", "Artimov", 1980, 350, 35 };
 	book b = { "frog","Tom", "Germanovich", 2000, 340, 34 };
 	book c = { "like", "Red", "jonson", 2003, 200, 36 };
 	mass[0] = a;
@@ -29,8 +30,11 @@ int main() {
 	cout << '\n';
 	cout << "Книга 1: \n";
 	save_book(a,path);
+	cout << '\n';
 	cout << "Книга 2: \n";
+	cout << '\n';
 	save_book(b, path);
+	cout << '\n';
 	cout << "Книга 3: \n";
 	save_book(c, path);
 	cout << '\n';
