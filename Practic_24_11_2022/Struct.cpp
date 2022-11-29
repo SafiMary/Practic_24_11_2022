@@ -40,10 +40,12 @@ void save_book(book& P, std::string& path) {
 
 void add_book(book*& arr, int length) {
 	std::cout << "Добавьте книгу: \n";
-	book* tmp = new book[length + 1]{};
+	book* tmp = new book[length + 1
+	]{};
 	for (int i = 0; i < length; i++)
 		tmp[i] = arr[i];
 	delete[] arr;
+
 	arr = tmp;
 	std::cout << "Введите название книги: " << '\n';
 	std::cin >> arr[length].title;

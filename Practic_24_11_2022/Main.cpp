@@ -19,7 +19,7 @@ int main() {
 	mass[0] = a;
 	mass[1] = b;
 	mass[2] = c;
-	show_book(a);
+	/*show_book(a);
 	cout << '\n';
 	show_book(b);
 	cout << '\n';
@@ -44,9 +44,27 @@ int main() {
 	cout << "Книга 4: \n";
 	show_book(mass[3]);
 	cout << '\n';
-	clear_arr(mass,n);
-
-	
+	clear_arr(mass,n);*/
+	int e;
+	do{
+	cout << "Дорогой друг, у тебя есть возможность выбрать следующие функции: \n";
+	cout << "1. Добавить свою любимую книгу.\n";
+	cout << "2. Сохранить информацию о своей любимой книге.\n";
+	cout << "3. Показать информацию о своей любимой книге.\n";
+	cout << "4. Очистите информацию о своей любимой книге.\n";
+	cout << "5. Завершение работы.\n";
+	cout << "Вводите номер команды!\n";
+	cin >> e;
+	switch (e) {
+	case 1: add_book(mass, n); break;
+	case 2:	save_book(mass[3], path); break;
+	case 3:	show_book(mass[3]); break;
+	case 4:	clear_arr(mass, n); break;
+	case 5: exit(0);
+	default:cout << "Ошибка ввода!!\n"; break;
+	}
+		
+	} while (e != 5);
 
 
 
